@@ -147,7 +147,8 @@
               "engineering/architecture/index",
               "engineering/architecture/services-overview",
               "engineering/architecture/data-models",
-              "engineering/architecture/dash-skogai-types"
+              "engineering/architecture/dash-skogai-types",
+              "engineering/architecture/skogai-repository-overview"
             ]
           }
         ]

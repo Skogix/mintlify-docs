@@ -1,0 +1,41 @@
+---
+title: "SkogAI repository and architecture overview"
+sidebarTitle: "Repository overview"
+description: "An orientation to the skogai2/skogai repository, its relationship to the runner experiments, and the documented dash-skogai design concepts."
+keywords:
+  - SkogAI
+  - skogai2
+  - architecture
+  - dash-skogai
+---
+
+The `skogai2/skogai` repository is a reference point for SkogAI's evolving design. This page explains how to orient yourself between the earlier `dash-skogai` concepts and newer runner experiments, without treating experimental code as a finalized architecture.
+
+## Repository context
+
+- **`skogai2/skogai`**: contains earlier `dash-skogai` design material describing project concepts.
+- **`skogai2/skogai-runner`**: a separate test implementation exploring the direction of SkogAI 3.0.
+- **SkogAI 3.0**: the evolving direction of the project; concepts can remain consistent even when their implementation changes.
+
+<Note>
+  This is an orientation page, not a verified inventory of the repositories' current contents. The GitHub repository could not be read during this documentation update. Confirm implementation details against source before treating them as current behavior.
+</Note>
+
+## Start with the type model
+
+The existing [dash-skogai types](/engineering/architecture/dash-skogai-types) page describes an earlier model in which types declare the files their instances **own**, **write**, and **watch**.
+
+Its ownership model distinguishes a file's single owner from any number of writers or watchers. That distinction is useful for interpreting the earlier design, but does not by itself establish which pieces are implemented in today's runner.
+
+## Reading the repositories together
+
+1. Read the `dash-skogai` design material in `skogai2/skogai` to understand the original concepts.
+2. Compare the same concerns against `skogai2/skogai-runner` to see how they are being tested.
+3. Separate **design intent**, **experimental implementation**, and **verified current behavior** when writing new documentation.
+4. Link assertions about active commands, configuration, permissions, and behavior to specific source files or commits.
+
+## Source references
+
+- [skogai2/skogai on GitHub](https://github.com/skogai2/skogai)
+- [skogai2/skogai-runner on GitHub](https://github.com/skogai2/skogai-runner)
+- [dash-skogai types](/engineering/architecture/dash-skogai-types)
